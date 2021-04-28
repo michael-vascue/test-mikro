@@ -1,0 +1,28 @@
+{
+  "name": "test-mikro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn ts-node-dev main.ts",
+    "schema:update": "yarn mikro-orm schema:update -r"
+  },
+  "dependencies": {
+    "@mikro-orm/core": "^5.0.0-dev.62",
+    "@mikro-orm/mysql": "^5.0.0-dev.62",
+    "@mikro-orm/reflection": "^5.0.0-dev.62",
+    "@mikro-orm/sql-highlighter": "^1.0.1"
+  },
+  "devDependencies": {
+    "@mikro-orm/cli": "^5.0.0-dev.62",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./mikro-orm.config.ts"
+    ]
+  }
+}
